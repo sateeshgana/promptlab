@@ -17,7 +17,11 @@ export default async (req: Request) => {
 
   let body: { prompt?: string; systemPrompt?: string; model?: string; provider?: string }
   try { body = await req.json() }
-  catch { return new Response('Invalid JSON', { status: 400 }) }
+  catch {
+    return new Response(JSON.stringify({ error: 'Invalid JSON' }), {
+      status: 400, headers: { 'Content-Type': 'application/json' },
+    })
+  }
 
   const { prompt, systemPrompt = '', model, provider } = body
   if (!prompt || !model || !provider)
