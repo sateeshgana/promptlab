@@ -6,10 +6,10 @@ import { vi } from 'vitest'
 import type { ModelConfig, RunPromptResponse } from '../types'
 
 const model: ModelConfig = {
-  id: 'llama-3.3-70b-versatile',
-  label: 'Llama 3.3 70B',
+  id: 'gemma2-9b-it',
+  label: 'Gemma 2 9B',
   provider: 'groq',
-  color: 'bg-[#e8890c]',
+  color: 'bg-[#1a73e8]',
 }
 
 describe('ModelResponseColumn', () => {

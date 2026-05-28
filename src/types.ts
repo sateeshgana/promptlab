@@ -1,19 +1,19 @@
 export type ModelId =
   | 'llama-3.3-70b-versatile'
-  | 'deepseek-chat'
-  | 'mixtral-8x7b-32768'
+  | 'gemma2-9b-it'
+  | 'deepseek-r1-distill-llama-70b'
 
 export interface ModelConfig {
   id: ModelId
   label: string
-  provider: 'groq' | 'deepseek'
+  provider: 'groq'
   color: string
 }
 
 export const MODELS: ModelConfig[] = [
-  { id: 'llama-3.3-70b-versatile', label: 'Llama 3.3 70B', provider: 'groq',     color: 'bg-[#e8890c]' },
-  { id: 'deepseek-chat',           label: 'DeepSeek V3',   provider: 'deepseek', color: 'bg-sky-500'    },
-  { id: 'mixtral-8x7b-32768',      label: 'Mixtral 8x7B',  provider: 'groq',     color: 'bg-violet-500' },
+  { id: 'llama-3.3-70b-versatile',       label: 'Llama 3.3 70B',  provider: 'groq', color: 'bg-[#e8890c]'  },
+  { id: 'gemma2-9b-it',                  label: 'Gemma 2 9B',     provider: 'groq', color: 'bg-[#1a73e8]'  },
+  { id: 'deepseek-r1-distill-llama-70b', label: 'DeepSeek R1 70B',provider: 'groq', color: 'bg-violet-500' },
 ]
 
 export interface PromptState {

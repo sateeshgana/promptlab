@@ -13,7 +13,7 @@ import { MODELS, type ModelId, type PromptState } from './types'
 const DEFAULT: PromptState = {
   userPrompt: '',
   systemPrompt: '',
-  selectedModels: ['llama-3.3-70b-versatile', 'deepseek-chat', 'mixtral-8x7b-32768'],
+  selectedModels: ['llama-3.3-70b-versatile', 'gemma2-9b-it', 'deepseek-r1-distill-llama-70b'],
 }
 
 export default function App() {
