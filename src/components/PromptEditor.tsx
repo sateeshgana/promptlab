@@ -21,13 +21,13 @@ export function PromptEditor({
   return (
     <div className="flex flex-col gap-3">
       <div className="flex justify-between items-center">
-        <label className="text-sm font-medium text-gray-400">Prompt</label>
+        <label className="text-sm font-medium text-slate-500">Prompt</label>
         <button
           type="button"
           onClick={() => setShowSystem((v) => !v)}
           className={clsx(
-            'flex items-center gap-1.5 text-xs px-2 py-1 rounded-md transition-colors',
-            showSystem ? 'bg-gray-700 text-gray-200' : 'bg-gray-800 text-gray-400 hover:text-gray-200',
+            'flex items-center gap-1.5 text-xs px-2 py-1 rounded-md transition-colors border',
+            showSystem ? 'bg-[#e4e8f5] border-[#e4e8f5] text-slate-700' : 'bg-white border-[#e4e8f5] text-slate-400 hover:text-slate-700',
           )}
         >
           <Settings size={12} /> System prompt
@@ -40,7 +40,7 @@ export function PromptEditor({
           onChange={(e) => onSystemPromptChange(e.target.value)}
           placeholder="System prompt…"
           rows={3}
-          className="w-full rounded-lg bg-gray-800 border border-gray-700 text-gray-100 placeholder-gray-500 p-3 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full rounded-lg bg-white border border-[#e4e8f5] text-slate-900 placeholder-slate-300 p-3 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-[#5c6bc0]"
         />
       )}
 
@@ -49,11 +49,11 @@ export function PromptEditor({
         onChange={(e) => onUserPromptChange(e.target.value)}
         placeholder="Write your prompt here…"
         rows={6}
-        className="w-full rounded-lg bg-gray-800 border border-gray-700 text-gray-100 placeholder-gray-500 p-3 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="w-full rounded-lg bg-white border border-[#e4e8f5] text-slate-900 placeholder-slate-300 p-3 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-[#5c6bc0]"
       />
 
       <div className="flex justify-between items-center">
-        <span className="text-xs text-gray-500">{userPrompt.length} chars</span>
+        <span className="text-xs text-slate-400">{userPrompt.length} chars</span>
         <button
           type="button"
           onClick={onRun}
@@ -61,8 +61,8 @@ export function PromptEditor({
           className={clsx(
             'flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors',
             canRun
-              ? 'bg-blue-600 hover:bg-blue-500 text-white'
-              : 'bg-gray-700 text-gray-500 cursor-not-allowed',
+              ? 'bg-[#10a37f] hover:bg-[#0d8f6d] text-white'
+              : 'bg-slate-100 text-slate-300 cursor-not-allowed',
           )}
         >
           <Play size={14} />
