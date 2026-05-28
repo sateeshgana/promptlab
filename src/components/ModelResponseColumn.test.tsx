@@ -9,7 +9,7 @@ const model: ModelConfig = {
   id: 'llama-3.3-70b-versatile',
   label: 'Llama 3.3 70B',
   provider: 'groq',
-  color: 'bg-orange-600',
+  color: 'bg-[#10a37f]',
 }
 
 describe('ModelResponseColumn', () => {
