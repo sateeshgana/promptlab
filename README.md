@@ -2,7 +2,7 @@
 
 > Compare LLM responses side-by-side. Free, open-source, no signup required.
 
-**[✨ Try it live →](https://promptlab-ai.netlify.app)**
+**[✨ Try it live →](https://prompt-lab-ai.netlify.app)**
 
 ## Features
 
@@ -15,7 +15,7 @@
 ## Local development
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/promptlab
+git clone https://github.com/sateeshgana/promptlab
 cd promptlab
 npm install
 cp .env.example .env
@@ -30,7 +30,7 @@ netlify dev        # starts at http://localhost:8888
 
 ## Deploy your own
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/YOUR_USERNAME/promptlab)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/sateeshgana/promptlab)
 
 Set environment variables in the Netlify dashboard:
 - `GROQ_API_KEY`
