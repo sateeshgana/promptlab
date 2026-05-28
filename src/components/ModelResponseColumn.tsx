@@ -25,7 +25,7 @@ export function ModelResponseColumn({ model, response, isLoading, error }: Props
   }
 
   return (
-    <div className="flex flex-col rounded-xl border border-[#e4e8f5] bg-white overflow-hidden min-h-48">
+    <div className="flex flex-col rounded-xl border border-[#ede5d8] bg-white overflow-hidden min-h-48">
       {/* Header */}
       <div className={`flex items-center justify-between px-4 py-2.5 ${model.color}`}>
         <span className="text-sm font-semibold text-white">{model.label}</span>
@@ -43,13 +43,13 @@ export function ModelResponseColumn({ model, response, isLoading, error }: Props
       </div>
 
       {/* Body */}
-      <div className="flex-1 p-4 text-sm text-slate-800">
+      <div className="flex-1 p-4 text-sm text-[#1c1410] bg-[#faf6f0]">
         {isLoading && (
           <div data-testid="skeleton" className="space-y-2 animate-pulse">
-            <div className="h-3 bg-[#e4e8f5] rounded w-3/4" />
-            <div className="h-3 bg-[#e4e8f5] rounded w-full" />
-            <div className="h-3 bg-[#e4e8f5] rounded w-5/6" />
-            <div className="h-3 bg-[#e4e8f5] rounded w-2/3" />
+            <div className="h-3 bg-[#ede5d8] rounded w-3/4" />
+            <div className="h-3 bg-[#ede5d8] rounded w-full" />
+            <div className="h-3 bg-[#ede5d8] rounded w-5/6" />
+            <div className="h-3 bg-[#ede5d8] rounded w-2/3" />
           </div>
         )}
 
@@ -63,14 +63,14 @@ export function ModelResponseColumn({ model, response, isLoading, error }: Props
         {response && !isLoading && (
           <div>
             <pre className="whitespace-pre-wrap font-sans leading-relaxed">{response.content}</pre>
-            <p className="mt-3 text-xs text-slate-400">
+            <p className="mt-3 text-xs text-[#c4b49e]">
               {response.outputTokens} tokens out · {response.inputTokens} in
             </p>
           </div>
         )}
 
         {!isLoading && !error && !response && (
-          <p className="text-slate-300 italic text-xs">Response will appear here…</p>
+          <p className="text-[#c4b49e] italic text-xs">Response will appear here…</p>
         )}
       </div>
     </div>

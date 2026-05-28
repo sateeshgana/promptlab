@@ -11,7 +11,7 @@ export interface ModelConfig {
 }
 
 export const MODELS: ModelConfig[] = [
-  { id: 'llama-3.3-70b-versatile', label: 'Llama 3.3 70B', provider: 'groq',     color: 'bg-[#10a37f]' },
+  { id: 'llama-3.3-70b-versatile', label: 'Llama 3.3 70B', provider: 'groq',     color: 'bg-[#e8890c]' },
   { id: 'deepseek-chat',           label: 'DeepSeek V3',   provider: 'deepseek', color: 'bg-sky-500'    },
   { id: 'mixtral-8x7b-32768',      label: 'Mixtral 8x7B',  provider: 'groq',     color: 'bg-violet-500' },
 ]

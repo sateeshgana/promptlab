@@ -29,20 +29,20 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#f5f7ff] text-slate-900">
+    <div className="min-h-screen bg-white text-[#1c1410]">
       {/* Header */}
-      <header className="border-b border-[#e4e8f5] bg-white px-6 py-4 flex items-center justify-between">
+      <header className="bg-[#1c1410] px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <Zap size={20} className="text-[#5c6bc0]" />
-          <span className="font-bold text-lg">PromptLab</span>
-          <span className="text-xs text-slate-400 ml-1">Compare LLMs side-by-side</span>
+          <Zap size={20} className="text-[#e8890c]" />
+          <span className="font-bold text-lg text-white">PromptLab</span>
+          <span className="text-xs text-[#a08060] ml-1">Compare LLMs side-by-side</span>
         </div>
         <ShareButton promptState={state} />
       </header>
 
       <div className="flex h-[calc(100vh-65px)]">
         {/* Sidebar */}
-        <aside className="w-64 border-r border-[#e4e8f5] bg-white p-4 overflow-y-auto hidden lg:block">
+        <aside className="w-64 border-r border-[#ede5d8] bg-[#faf6f0] p-4 overflow-y-auto hidden lg:block">
           <PromptHistory
             history={history}
             onRestore={(p) =>
@@ -83,7 +83,7 @@ export default function App() {
                 type="button"
                 onClick={() => save(state)}
                 disabled={!state.userPrompt.trim()}
-                className="flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg bg-white text-slate-500 hover:text-slate-800 disabled:opacity-40 disabled:cursor-not-allowed border border-[#e4e8f5] transition-colors"
+                className="flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg bg-[#faf6f0] text-[#7a6652] hover:text-[#1c1410] disabled:opacity-40 disabled:cursor-not-allowed border border-[#ede5d8] transition-colors"
               >
                 <BookmarkPlus size={12} />
                 Save prompt

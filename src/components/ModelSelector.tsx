@@ -28,7 +28,7 @@ export function ModelSelector({ selectedModels, onChange }: Props) {
             'px-3 py-1.5 rounded-full text-xs font-medium border transition-all',
             selectedModels.includes(m.id)
               ? `${m.color} border-transparent text-white`
-              : 'bg-white border-[#e4e8f5] text-slate-400 hover:border-slate-400',
+              : 'bg-[#faf6f0] border-[#ede5d8] text-[#7a6652] hover:border-[#e8890c]',
           )}
         >
           {m.label}
