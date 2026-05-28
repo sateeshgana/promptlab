@@ -8,9 +8,13 @@ export function ShareButton({ promptState }: { promptState: PromptState }) {
   const [copied, setCopied] = useState(false)
 
   const share = async () => {
-    await navigator.clipboard.writeText(buildShareUrl(promptState))
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2500)
+    try {
+      await navigator.clipboard.writeText(buildShareUrl(promptState))
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2500)
+    } catch {
+      // clipboard unavailable (non-HTTPS, permission denied) — silent fail
+    }
   }
 
   return (

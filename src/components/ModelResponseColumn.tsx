@@ -15,9 +15,13 @@ export function ModelResponseColumn({ model, response, isLoading, error }: Props
 
   const copy = async () => {
     if (!response?.content) return
-    await navigator.clipboard.writeText(response.content)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
+    try {
+      await navigator.clipboard.writeText(response.content)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch {
+      // clipboard unavailable — silent fail
+    }
   }
 
   return (
